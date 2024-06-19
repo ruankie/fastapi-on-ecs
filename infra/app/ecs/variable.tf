@@ -22,3 +22,9 @@ variable "private_subnet_ids" {
   description = "IDs of private subnets where the ECS service will be deployed to."
   type        = list(string)
 }
+
+variable "lambda_invoke_arn" {
+  description = "ARN of Lambda to be given invoke permission from ECS."
+  type        = string
+  default     = "arn:aws:lambda:*:*:function:*"
+}
